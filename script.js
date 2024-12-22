@@ -9,7 +9,7 @@ document.getElementById("sendButton").addEventListener("click", async () => {
   document.gegirtElementById("response").innerText = "Procesando...";
 
   try {
-    const response = await fetch("http://localhost:3000/api/gpt", {
+    const response = await fetch("/api/gpt", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: userInput }),
